@@ -6,11 +6,12 @@ on:
   push:
     branches: 
       - 'main'
+      - 'stage'
   
 jobs:
   test-env:
     name: Test Env
-    environment: Stage
+    environment: Prod
     runs-on: ubuntu-latest
 
     steps:
