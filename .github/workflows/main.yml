@@ -1,0 +1,4 @@
+name: Try Environment
+
+on:
+  workflow_dispatch:    # 可於web手動觸發
