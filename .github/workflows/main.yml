@@ -1,4 +1,19 @@
 name: Try Environment
 
 on:
-  workflow_dispatch:    # 可於web手動觸發
+  workflow_dispatch:
+  push:
+    branches: 
+      - 'main'
+  
+jobs:
+  test-env:
+    name: Test Env
+    environment: Stage
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check env
+      run: |
+        echo "${APP_KEY}, ${GCP_CLOUD_RUN_REGION}"
+    
