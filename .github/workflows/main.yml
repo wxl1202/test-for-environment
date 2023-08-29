@@ -15,5 +15,5 @@ jobs:
     steps:
     - name: Check env
       run: |
-        echo "${APP_KEY}, ${GCP_CLOUD_RUN_REGION}"
+        echo "${{ env.APP_KEY }}, ${{ env.GCP_CLOUD_RUN_REGION }}"
     
