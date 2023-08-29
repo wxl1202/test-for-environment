@@ -17,4 +17,5 @@ jobs:
     - name: Check env
       run: |
         echo "${{ secrets.APP_KEY }}, ${{ vars.GCP_CLOUD_RUN_REGION }}"
+        echo "now in stage branch"
     
