@@ -16,4 +16,9 @@ jobs:
     - name: Check env
       run: |
         echo "${{ secrets.APP_KEY }}, ${{ vars.GCP_CLOUD_RUN_REGION }}"
+        echo "GCP_CLOUD_RUN_REGION1=${{ vars.GCP_CLOUD_RUN_REGION }}" >> "$GITHUB_ENV"
+
+    - name: Check env2
+      run: |
+        echo ${{ env.GCP_CLOUD_RUN_REGION1 }}
     
